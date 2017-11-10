@@ -22,7 +22,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 h1, h2 {
@@ -35,7 +35,7 @@ h1, h2 {
   overflow: hidden;
  } */
 
-.container img {
+img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -79,9 +79,10 @@ nav span{
   padding: 2rem 1.5rem;
   background-color: #d8d8d8;
   align-items: center;
+  height: 37.5rem;
 }
 
-.jumbotron .container {
+.jumbotron img {
   width: 60%;
 }
 
@@ -95,13 +96,47 @@ nav span{
 }
 
 .jumbotron h1, .jumbotron h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; /* add space between the different elements */
 }
 
 .jumbotron h3 {
-  width: 90%;
+  width: 90%; /*the button should not fill the whole width */
   padding: .5rem 0;
   background-color: #494949;
   color: white;
   text-align: center;
+}
+
+/* second of the middle containers with the quote and side-columns */
+.second {
+  display: flex;
+  padding: 2rem 1.5rem;
+  background-color: ##f2f5f5;
+  align-items: center;
+  height: 37.5rem;
+}
+
+.quote-pic {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.quote-pic img {
+  margin-bottom: 2rem;
+}
+
+.quote-pic h2 {
+  margin-bottom: 1.5rem;
+}
+
+.quote-pic q {
+  margin-bottom: 2rem;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
