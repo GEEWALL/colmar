@@ -41,6 +41,20 @@ img {
   display: block;
 }
 
+/* colors information **
+dark gray = #494949 (colmar, learn something, button, all main titles)
+medium dark gray = #8d8d8d ( nav, quote, dates, etc)
+gray = #dbdbdb (academy, jumbotron background, guest lecture, etc)
+medium light gray = #c1c1c1 (start learning background)
+light gray = #f3f5f5 (second background, thesis & footer background)
+*/
+
+/* font information **
+large font = 3rem - 48px (h1)
+medium font = 2rem - 32px (h2)
+small font = 1 rem - 16px (h3)
+tiny font = 0.75rem - 12px (h4)
+
 /* header */
 
 header {
@@ -63,23 +77,23 @@ header {
 }
 
 #grey {
-  color: #9a9a9a;
+  color: #dbdbdb;
   font-weight: 300;
 }
 
 nav span{
   padding-left: 1rem;
   font-weight: 300;
-  color: #494949;
+  color: #8d8d8d;
 }
 
 /* jumbotron */
 .jumbotron {
   display: flex;
   padding: 2rem 1.5rem;
-  background-color: #d8d8d8;
+  background-color: #dbdbdb;
   align-items: center;
-  height: 37.5rem;
+  height: auto;
 }
 
 .jumbotron img {
@@ -111,9 +125,9 @@ nav span{
 .second {
   display: flex;
   padding: 2rem 1.5rem;
-  background-color: ##f2f5f5;
+  background-color: #f3f5f5;
   align-items: center;
-  height: 37.5rem;
+  height: auto;
 }
 
 .quote-pic {
@@ -121,6 +135,9 @@ nav span{
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  border-right: 2px solid #d8d8d8;
+  height: 100%;
+  padding-right: 24px;
 }
 
 .quote-pic img {
@@ -128,15 +145,29 @@ nav span{
 }
 
 .quote-pic h2 {
+  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .quote-pic q {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  font-size: .875rem;
+  color: #9a9a9a;
+  line-height: 1.25;
+  width: 90%;
+}
+
+.quote-pic h4 {
+  color: #9a9a9a;
 }
 
 .side-column {
   display: flex;
   flex-direction: column;
   width: 40%;
+}
+
+.info {
+  display: flex;
 }
