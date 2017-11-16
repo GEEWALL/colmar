@@ -29,11 +29,12 @@ h1, h2 {
   color: #494949;
 }
 
-/* .container {
-  width: 50%;
+.container {
   height: auto;
   overflow: hidden;
- } */
+  margin: auto;
+  display: flex;
+ }
 
 img {
   max-width: 100%;
@@ -42,8 +43,8 @@ img {
 }
 
 /* colors information **
-dark gray = #494949 (colmar, learn something, button, all main titles)
-medium dark gray = #8d8d8d ( nav, quote, dates, etc)
+dark gray = #494949 (colmar, learn something, button, nav, all main titles)
+medium dark gray = #8d8d8d ( quote, dates, etc)
 gray = #dbdbdb (academy, jumbotron background, guest lecture, etc)
 medium light gray = #c1c1c1 (start learning background)
 light gray = #f3f5f5 (second background, thesis & footer background)
@@ -58,10 +59,9 @@ tiny font = 0.75rem - 12px (h4)
 /* header */
 
 header {
-  display: flex;
   height: 64px;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 1.5rem;
 }
 
@@ -84,20 +84,19 @@ header {
 nav span{
   padding-left: 1rem;
   font-weight: 300;
-  color: #8d8d8d;
+  color: #494949;
 }
 
 /* jumbotron */
 .jumbotron {
-  display: flex;
   padding: 2rem 1.5rem;
   background-color: #dbdbdb;
   align-items: center;
-  height: auto;
 }
 
 .jumbotron img {
   width: 60%;
+  margin-right: 1.5rem;
 }
 
 .headline {
@@ -122,34 +121,29 @@ nav span{
 }
 
 /* second of the middle containers with the quote and side-columns */
-.second {
-  display: flex;
+.practicing {
   padding: 2rem 1.5rem;
   background-color: #f3f5f5;
   align-items: center;
-  height: auto;
 }
 
-.quote-pic {
+.left {
   width: 60%;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  border-right: 2px solid #d8d8d8;
-  height: 100%;
-  padding-right: 24px;
 }
 
-.quote-pic img {
+.left img {
   margin-bottom: 2rem;
 }
 
-.quote-pic h2 {
+.left h2 {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
-.quote-pic q {
+.left q {
   margin-bottom: 1.5rem;
   font-weight: 300;
   font-size: .875rem;
@@ -158,14 +152,19 @@ nav span{
   width: 90%;
 }
 
-.quote-pic h4 {
-  color: #9a9a9a;
+.left  h4 {
+  color: #494949;
+  font-weight: 300;
 }
 
-.side-column {
+/* side-column styling */
+
+.right {
   display: flex;
   flex-direction: column;
   width: 40%;
+  border: 1px solid red;
+  padding-left: 1.5rem;
 }
 
 .info {
