@@ -44,10 +44,11 @@ img {
 
 /* colors information **
 dark gray = #494949 (colmar, learn something, button, nav, all main titles)
-medium dark gray = #8d8d8d ( quote, dates, etc)
-gray = #dbdbdb (academy, jumbotron background, guest lecture, etc)
-medium light gray = #c1c1c1 (start learning background)
+medium dark gray = #8d8d8d (quote, dates, etc)
+gray = #c1c1c1 (academy, jumbotron background, guest lecture, etc)
+medium light gray = #dbdbdb (start learning background)
 light gray = #f3f5f5 (second background, thesis & footer background)
+blue = #648fdf (read more)
 */
 
 /* font information **
@@ -77,7 +78,7 @@ header {
 }
 
 #grey {
-  color: #dbdbdb;
+  color: #c1c1c1;
   font-weight: 300;
 }
 
@@ -90,7 +91,7 @@ nav span{
 /* jumbotron */
 .jumbotron {
   padding: 2rem 1.5rem;
-  background-color: #dbdbdb;
+  background-color: #c1c1c1;
   align-items: center;
 }
 
@@ -101,7 +102,7 @@ nav span{
 
 .headline {
   margin: 3rem; /* 24px was not enough, looked bad */
-  width: 35%;
+  width: 40%;
 }
 
 .jumbotron h1 {
@@ -122,9 +123,7 @@ nav span{
 
 /* second of the middle containers with the quote and side-columns */
 .practicing {
-  padding: 2rem 1.5rem;
   background-color: #f3f5f5;
-  align-items: center;
 }
 
 .left {
@@ -132,6 +131,8 @@ nav span{
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid #c1c1c1;
 }
 
 .left img {
@@ -163,10 +164,96 @@ nav span{
   display: flex;
   flex-direction: column;
   width: 40%;
-  border: 1px solid red;
-  padding-left: 1.5rem;
+  margin: 2rem 1.5rem 2rem 0rem;
 }
 
 .info {
   display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.pic {
+  height: auto;
+  width: 35%;
+  margin-right: 1rem;
+  border: 1px solid #c1c1c1;
+}
+
+.items {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.items h2, h3 {
+  margin-bottom: .5rem;
+}
+
+.items h3 {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.items h3:last-child {
+  color: #648fdf;
+}
+
+#guest {
+  background-color: #c1c1c1;
+}
+
+/* start learning */
+
+.learning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4.5rem;
+  background-color: #dbdbdb;
+}
+
+.learning h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 24rem;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+
+.course-img {
+  height: auto;
+}
+
+.course-text {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course-text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.course-text h3 {
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+.course-text h3:first-of-type {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
