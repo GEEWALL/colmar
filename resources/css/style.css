@@ -10,6 +10,7 @@ body {
 h1 {
   font-size: 3rem;
   color: #494949;
+  font-weight: 700;
 }
 
 h2 {
@@ -42,8 +43,16 @@ img {
   display: block;
 }
 
+video {
+  width: 100%;
+  object-fit: contain;
+}
+
+div {
+  display: block;
+}
 /* colors information **
-dark gray = #494949 (colmar, learn something, button, nav, all main titles)
+dark gray = #494949 (colmar, learn something, button, top nav, all main titles)
 medium dark gray = #8d8d8d (quote, dates, etc)
 gray = #c1c1c1 (academy, jumbotron background, guest lecture, etc)
 medium light gray = #dbdbdb (start learning background)
@@ -60,7 +69,7 @@ tiny font = 0.75rem - 12px (h4)
 /* header */
 
 header {
-  height: 64px;
+  height: 4rem;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
@@ -128,10 +137,10 @@ nav span{
 
 .left {
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
   padding: 2rem 1.5rem;
+}
+
+.practicing .left {
   border-right: 1px solid #c1c1c1;
 }
 
@@ -139,13 +148,12 @@ nav span{
   margin-bottom: 2rem;
 }
 
-.left h2 {
+.practicing .left h2 {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .left q {
-  margin-bottom: 1.5rem;
   font-weight: 300;
   font-size: .875rem;
   color: #9a9a9a;
@@ -153,7 +161,11 @@ nav span{
   width: 90%;
 }
 
-.left  h4 {
+.practicing .left q {
+  margin-bottom: 1.5rem;
+}
+
+.left h4 {
   color: #494949;
   font-weight: 300;
 }
@@ -161,15 +173,20 @@ nav span{
 /* side-column styling */
 
 .right {
-  display: flex;
-  flex-direction: column;
   width: 40%;
-  margin: 2rem 1.5rem 2rem 0rem;
+  padding: 2rem 1.5rem 2rem 0;
+}
+
+.right div:first-child {
+  padding-top: 0px;
 }
 
 .info {
   display: flex;
   padding: 1rem;
+}
+
+.practicing .info {
   border-bottom: 1px solid #c1c1c1;
 }
 
@@ -177,7 +194,6 @@ nav span{
   height: auto;
   width: 35%;
   margin-right: 1rem;
-  border: 1px solid #c1c1c1;
 }
 
 .items {
@@ -216,7 +232,6 @@ nav span{
 
 .learning h1 {
   margin-bottom: 2rem;
-  font-weight: 700;
 }
 
 .grid {
@@ -227,8 +242,6 @@ nav span{
 }
 
 .course {
-  display: flex;
-  flex-direction: column;
   width: 22rem;
   height: 24rem;
   background-color: white;
@@ -256,4 +269,47 @@ nav span{
 .course-text h3:first-of-type {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+}
+
+/* thesis exhibit */ /* re-using styling & html from the start learning container*/
+
+.thesis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  border-bottom: 1px solid #c1c1c1;
+  background-color: #f3f5f5;
+}
+
+.row {
+  display: flex;
+  max-width: 100%;
+}
+
+.thesis video {
+  margin-bottom: 1.5rem;
+}
+
+.thesis .left h2 {
+  margin-bottom: 0.5rem;
+}
+
+.thesis .right div:first-child {
+  background-color: #c1c1c1;
+}
+
+/* footer */
+footer {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  color: #8d8d8d;
+  font-weight: 300;
+  background-color: #f3f5f5;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav {
+  display: flex;
+  font-size: 0.75rem;
 }
