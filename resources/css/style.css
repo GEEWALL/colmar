@@ -1,4 +1,4 @@
-/* Universal styles */
+/* ------------------------ Universal styles ------------------------ */
 html {
   font-size: 16px;
 }
@@ -45,29 +45,54 @@ img {
 
 video {
   width: 100%;
-  object-fit: contain;
 }
 
 div {
   display: block;
 }
+
+.left {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.right {
+  width: 40%;
+  padding: 2rem 1.5rem 2rem 0;
+}
+
 /* colors information **
-dark gray = #494949 (colmar, learn something, button, top nav, all main titles)
-medium dark gray = #8d8d8d (quote, dates, etc)
-gray = #c1c1c1 (academy, jumbotron background, guest lecture, etc)
-medium light gray = #dbdbdb (start learning background)
-light gray = #f3f5f5 (second background, thesis & footer background)
-blue = #648fdf (read more)
+dark gray = #494949
+medium dark gray = #8d8d8d
+gray = #c1c1c1
+medium light gray = #dbdbdb
+light gray = #f3f5f5
+blue = #648fdf
 */
 
-/* font information **
-large font = 3rem - 48px (h1)
-medium font = 2rem - 32px (h2)
-small font = 1 rem - 16px (h3)
-tiny font = 0.75rem - 12px (h4)
+/* ------------------------ Universal media queries ------------------------ */
+@media only screen and (min-width: 850px) {
+  .mobile {
+    display: none;
+  }
+}
 
-/* header */
+@media only screen and (max-width: 850px) {
+  .left {
+    width: 100%;
+    padding: 0;
+  }
 
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+/* ------------------------------ header ------------------------------ */
 header {
   height: 4rem;
   align-items: center;
@@ -97,21 +122,32 @@ nav span{
   color: #494949;
 }
 
-/* jumbotron */
+/* ------------------ media queries for header ------------------ */
+@media only screen and (max-width: 850px) {
+.logo {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav img {
+    height: 2rem;
+  }
+}
+
+/* ------------------------ jumbotron ------------------------ */
 .jumbotron {
-  padding: 2rem 1.5rem;
   background-color: #c1c1c1;
   align-items: center;
 }
 
-.jumbotron img {
-  width: 60%;
-  margin-right: 1.5rem;
-}
-
 .headline {
-  margin: 3rem; /* 24px was not enough, looked bad */
-  width: 40%;
+  width: 80%;
+  padding-left: 1.5rem; /*24px did not look right*/
 }
 
 .jumbotron h1 {
@@ -119,41 +155,59 @@ nav span{
 }
 
 .jumbotron h1, .jumbotron h2 {
-  margin-bottom: 3rem; /* add space between the different elements */
+  padding-bottom: 1.5rem; /* add space between the different elements */
 }
 
 .jumbotron h3 {
-  width: 90%; /*the button should not fill the whole width */
   padding: .5rem 0;
   background-color: #494949;
   color: white;
   text-align: center;
 }
 
-/* second of the middle containers with the quote and side-columns */
-.practicing {
-  background-color: #f3f5f5;
+/* ------------------ media queries for jumbotron ------------------ */
+@media only screen and (max-width: 850px) {
+  .jumbotron {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jumbotron h1 {
+    padding-bottom: 2rem; /* add space between the different elements */
+  }
+
+  .jumbotron h2 {
+    padding-bottom: 1.5rem;
+  }
+
+  .jumbotron h3 {
+    background-color: #8d8d8d;
+    font-weight: 700;
+    width: 80%;
+  }
+
+  .headline {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }
 
-.left {
-  width: 60%;
-  padding: 2rem 1.5rem;
+/* ------ second of the middle containers with quote and side-columns ------ */
+.practicing {
+  background-color: #f3f5f5;
 }
 
 .practicing .left {
   border-right: 1px solid #c1c1c1;
 }
 
-.left img {
-  margin-bottom: 2rem;
-}
-
 .practicing .left h2 {
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0 1.5rem 0;
 }
 
-.left q {
+p {
   font-weight: 300;
   font-size: .875rem;
   color: #9a9a9a;
@@ -161,33 +215,23 @@ nav span{
   width: 90%;
 }
 
-.practicing .left q {
-  margin-bottom: 1.5rem;
-}
-
 .left h4 {
   color: #494949;
   font-weight: 300;
+  margin-top: 1.5rem;
 }
 
-/* side-column styling */
-
-.right {
-  width: 40%;
-  padding: 2rem 1.5rem 2rem 0;
+/* ---------------- media queries for practicing container ---------------- */
+@media only screen and (max-width: 850px) {
+  .practicing .left {
+    display: none;
+  }
 }
 
-.right div:first-child {
-  padding-top: 0px;
-}
-
+/* ------------------------ side-column styling ------------------------ */
 .info {
   display: flex;
   padding: 1rem;
-}
-
-.practicing .info {
-  border-bottom: 1px solid #c1c1c1;
 }
 
 .pic {
@@ -203,7 +247,7 @@ nav span{
   justify-content: center;
 }
 
-.items h2, h3 {
+.items h2, .items h3 {
   margin-bottom: .5rem;
 }
 
@@ -216,11 +260,48 @@ nav span{
   color: #648fdf;
 }
 
-#guest {
-  background-color: #c1c1c1;
+/* ---------------------- media queries for side-column ---------------------- */
+@media only screen and (min-width: 850px) {
+  .practicing .right div:first-child {
+    padding-top: 0px;
+  }
+
+  .practicing .info {
+    border-bottom: 1px solid #c1c1c1;
+  }
+
+  #guest {
+    background-color: #c1c1c1;
+  }
 }
 
-/* start learning */
+@media only screen and (max-width: 850px) {
+  .practicing {
+    border-bottom: 1px solid #c1c1c1;
+  }
+
+  .practicing .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+.pic {
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+  }
+
+  .items {
+    padding-left: 1rem;
+  }
+}
+
+/* ------------------------ start learning ------------------------ */
 
 .learning {
   display: flex;
@@ -242,8 +323,6 @@ nav span{
 }
 
 .course {
-  width: 22rem;
-  height: 24rem;
   background-color: white;
   margin-bottom: 2rem;
 }
@@ -271,14 +350,49 @@ nav span{
   margin-bottom: 0.5rem;
 }
 
-/* thesis exhibit */ /* re-using styling & html from the start learning container*/
+/* -------------------- media queries for start learning -------------------- */
+@media only screen and (min-width: 850px) {
+  .course {
+    width: 22rem;
+    height: 24rem;
+  }
+}
 
+@media only screen and (max-width: 850px) {
+  .learning {
+    background-color: #f3f5f5;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #c1c1c1;
+  }
+
+  .learning h1 {
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .course {
+    background-color: #dbdbdb;
+    margin-bottom: 0.5rem;
+  }
+
+  .course-text h2 {
+    margin-bottom: 0;
+  }
+
+  .course-img, .course-text h3 {
+    display: none;
+  }
+}
+
+/* ------------------------ thesis exhibit ------------------------ */
 .thesis {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
-  border-bottom: 1px solid #c1c1c1;
   background-color: #f3f5f5;
 }
 
@@ -287,19 +401,36 @@ nav span{
   max-width: 100%;
 }
 
-.thesis video {
-  margin-bottom: 1.5rem;
-}
-
 .thesis .left h2 {
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .thesis .right div:first-child {
   background-color: #c1c1c1;
 }
 
-/* footer */
+/* -------------------- media queries for thesis exhibits -------------------- */
+@media only screen and (min-width: 850px) {
+  .thesis {
+    border-bottom: 1px solid #c1c1c1;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+.thesis .right, .thesis .left h2, .thesis .left p {
+    display: none;
+  }
+
+  .thesis h1 {
+    padding-bottom: 1rem;
+  }
+
+  .left {
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* ------------------------ footer ------------------------ */
 footer {
   padding: 1rem 1.5rem 2rem 1.5rem;
   color: #8d8d8d;
@@ -312,4 +443,11 @@ footer {
 footer nav {
   display: flex;
   font-size: 0.75rem;
+}
+
+/* -------------------- media queries for footer -------------------- */
+@media only screen and (max-width: 850px) {
+  footer {
+    padding: 1rem;
+  }
 }
